@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent any 
     stages {
         stage('Build') {
             steps {
@@ -21,9 +21,14 @@ pipeline {
                 sh './jenkins/scripts/deliver.sh'
             }
         }
-        stage('complite') {
+        stage('complet') {
             steps {
-                echo 'complite'
+                echo 'complet'
+            }
+        }
+           stage('test') {
+            steps {
+                echo 'test'
             }
         }
     }
